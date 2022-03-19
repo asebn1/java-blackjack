@@ -13,19 +13,19 @@ public final class Bet {
     }
 
     public void win() {
-        this.profit = (int) (betAmount * BetPoint.WIN.getRatio());
+        this.profit = BetPoint.win(betAmount);
     }
 
     public void lose() {
-        this.profit = (int) (betAmount * BetPoint.LOSE.getRatio());
+        this.profit = BetPoint.lose(betAmount);
     }
 
     public void bothBlackjack() {
-        this.profit = (int) (betAmount * BetPoint.BOTH_BLACKJACK.getRatio());
+        this.profit = BetPoint.bothBlackjack(betAmount);
     }
 
     public void blackjack() {
-        this.profit = (int) (betAmount * BetPoint.BLACKJACK.getRatio());
+        this.profit = BetPoint.blackjack(betAmount);
     }
 
     public void calculateFinalProfit(final List<Integer> profits) {
